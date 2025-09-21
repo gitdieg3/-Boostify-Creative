@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PT Kreatif Digital — Solusi Bisnis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta
+      name="description"
+      content="Perusahaan jasa pembuatan website, aplikasi, dan solusi digital modern."
+    />
+    <style>
+      :root {
+        --accent: #06b6d4;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+      /* Tombol WhatsApp melayang */
+      .whatsapp-float {
+        position: fixed;
+        width: 55px;
+        height: 55px;
+        bottom: 25px;
+        right: 25px;
+        background-color: #c51212;
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 28px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        z-index: 100;
+      }
+      .whatsapp-float:hover {
+        background-color: #3a20ba;
+      }
+      .my-float {
+        margin-top: 14px;
+      }
+      .btn-download {
+        background-color: #dc3545; /* merah */
+        border-color: #dc3545;
+        color: white;
+      }
+      .btn-download:hover {
+        background-color: #b02a37; /* merah gelap saat hover */
+        border-color: #a52834;
+      }
+      .payment-section {
+        padding: 60px 20px;
+        background: #f9f9f9;
+      }
+
+      .payment-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1100px;
+        margin: auto;
+        flex-wrap: wrap;
+      }
+
+      .payment-text {
+        flex: 1;
+        padding: 20px;
+      }
+
+      .payment-text h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      .payment-text p {
+        font-size: 16px;
+        color: #555;
+      }
+
+      .payment-logos {
+        flex: 1;
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+
+      .payment-logos img {
+        height: 50px;
+        transition: transform 0.3s;
+      }
+
+      .payment-logos img:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-800 antialiased">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 backdrop-blur bg-white/60 border-b border-slate-200"
+    >
+      <div
+        class="max-w-5xl mx-auto px-5 py-3 flex items-center justify-between"
+      >
+        <a href="#hero" class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 bg-gradient-to-br from-teal-400 to-cyan-400 rounded-lg flex items-center justify-center text-white font-bold"
+          >
+            <img src="daf571a98b9c60fa70dfc9e90bc9702b.jpg" alt="" />
+          </div>
+          <span class="font-semibold">Boostify Creative</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#about" class="hover:text-slate-600">Tentang</a>
+          <a href="#services" class="hover:text-slate-600">Layanan</a>
+          <a href="#contact" class="hover:text-slate-600">Kontak</a>
+          <a
+            href="#"
+            class="ml-4 inline-block px-4 py-2 rounded-md bg-red-600 hover:bg-red-700 text-white text-sm"
+            >Download Profil</a
+          >
+        </nav>
+        <div class="md:hidden">
+          <button
+            id="navToggle"
+            aria-label="Open menu"
+            class="p-2 rounded-md ring-1 ring-slate-200"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden border-t border-slate-100">
+        <div class="px-5 py-4 flex flex-col gap-3">
+          <a href="#about" class="py-2">Tentang</a>
+          <a href="#services" class="py-2">Layanan</a>
+          <a href="#contact" class="py-2">Kontak</a>
+          <a href="#" class="py-2 bg-teal-400 text-white text-center rounded"
+            >Download Profil</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="pt-12 pb-16">
+      <div
+        class="max-w-5xl mx-auto px-5 flex flex-col md:flex-row items-center gap-8"
+      >
+        <div class="flex-1">
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+            Solusi Digital untuk <span class="text-red-500">Anda</span>
+          </h1>
+          <p class="mt-4 text-slate-600 max-w-xl">
+            Meningkatkan potensi bisnis dengan layanan digital terintegrasi.
+          </p>
+          <div class="mt-6 flex gap-3">
+            <a
+              href="#services"
+              class="inline-block px-5 py-2 rounded-md bg-red-600 hover:bg-red-700 text-white"
+              >Lihat Layanan</a
+            >
+            <a
+              href="#contact"
+              class="inline-block px-5 py-2 rounded-md border border-slate-200 text-sm"
+              >Hubungi Kami</a
+            >
+          </div>
+          <div class="mt-6 text-sm text-slate-500">
+            Boostify Creative · Email:
+            <a href="mailto:info@kreatifdigital.com" class="underline"
+              >info@kreatifdigital.com</a
+            >
+          </div>
+        </div>
+        <div
+          class="w-56 h-56 md:w-72 md:h-72 bg-slate-100 rounded-2xl flex items-center justify-center"
+        >
+          <img
+            src="daf571a98b9c60fa70dfc9e90bc9702b.jpg"
+            alt="Logo Perusahaan"
+            class="w-full h-auto rounded-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-12 bg-slate-50 border-t border-slate-100">
+      <div
+        class="max-w-5xl mx-auto px-5 grid md:grid-cols-3 gap-8 items-center"
+      >
+        <div class="md:col-span-2">
+          <h2 class="text-3xl font-bold text-red-600">Tentang Kami</h2>
+          <p class="mt-3 text-slate-600">
+            Kami adalah perusahaan teknologi yang fokus membantu bisnis
+            berkembang dengan layanan pembuatan website, aplikasi, dan solusi
+            Social Media Growth Service. Visi kami adalah menjadi partner
+            strategis untuk transformasi digital Anda.
+          </p>
+          <ul class="mt-4 grid grid-cols-2 gap-2 text-sm text-slate-600">
+            <li>• Website Development</li>
+            <li>• Mobile App Development</li>
+            <li>• UI/UX Design</li>
+            <li>• Digital Marketing</li>
+          </ul>
+        </div>
+
+        <!-- Ganti statistik dengan keunggulan -->
+        <div class="grid gap-4">
+          <div
+            class="p-4 bg-white rounded-lg shadow ring-1 ring-slate-100 flex items-center gap-3"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-yellow-100 rounded-full"
+            >
+              ⚡
+            </div>
+            <span class="font-medium">Pengerjaan Cepat</span>
+          </div>
+          <div
+            class="p-4 bg-white rounded-lg shadow ring-1 ring-slate-100 flex items-center gap-3"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-full"
+            >
+              💰
+            </div>
+            <span class="font-medium">Harga Terjangkau</span>
+          </div>
+          <div
+            class="p-4 bg-white rounded-lg shadow ring-1 ring-slate-100 flex items-center gap-3"
+          >
+            <div
+              class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full"
+            >
+              🔒
+            </div>
+            <span class="font-medium">Privasi Aman</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-12">
+      <div class="max-w-5xl mx-auto px-5">
+        <h2 class="text-3xl font-bold text-red-600">Layanan Kami</h2>
+        <p class="mt-2 text-slate-600 text-sm">
+          Beberapa layanan utama yang kami tawarkan.
+        </p>
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="p-4 bg-white rounded-lg shadow-sm ring-1 ring-slate-100"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
+              alt="Website Icon"
+              class="w-12 h-12 mb-3"
+            />
+            <h3 class="font-semibold">Website Development</h3>
+            <p class="text-sm text-slate-600 mt-2">
+              Pembuatan website modern, cepat, dan responsif.
+            </p>
+          </article>
+
+          <article
+            class="p-4 bg-white rounded-lg shadow-sm ring-1 ring-slate-100"
+          >
+            <img src="boost.jpg" alt="boost Icon" class="w-12 h-12 mb-3" />
+            <h3 class="font-semibold">Social Media Boosting</h3>
+            <p class="text-sm text-slate-600 mt-2">
+              Bantu brand Anda makin dikenal melalui peningkatan followers,
+              engagement, dan visibilitas di berbagai platform media sosial.
+            </p>
+          </article>
+
+          <article
+            class="p-4 bg-white rounded-lg shadow-sm ring-1 ring-slate-100"
+          >
+            <img src="ui.jpg" alt="UI/UX Icon" class="w-12 h-12 mb-3" />
+            <h3 class="font-semibold">UI/UX Design</h3>
+            <p class="text-sm text-slate-600 mt-2">
+              Desain antarmuka yang bersih dan ramah pengguna.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Section Testimoni -->
+    <section id="testimoni" class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">
+          Apa Kata Klien Kami
+        </h2>
+        <p class="text-gray-600 mb-10">
+          Beberapa pengalaman mereka yang sudah bekerja sama dengan kami.
+        </p>
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!-- Testimoni 1 -->
+            <div class="swiper-slide bg-white p-6 rounded-xl shadow-md">
+              <p class="text-gray-700 italic mb-4">
+                "Layanannya cepat dan hasilnya sangat memuaskan. Bisnis saya
+                jadi lebih dikenal online."
+              </p>
+              <h4 class="font-semibold text-teal-600">Budi Santoso</h4>
+              <span class="text-sm text-gray-500">Pemilik UMKM Kuliner</span>
+            </div>
+
+            <!-- Testimoni 2 -->
+            <div class="swiper-slide bg-white p-6 rounded-xl shadow-md">
+              <p class="text-gray-700 italic mb-4">
+                "Harga terjangkau tapi kualitas tetap profesional. Recommended
+                banget!"
+              </p>
+              <h4 class="font-semibold text-teal-600">Siti Aisyah</h4>
+              <span class="text-sm text-gray-500">Owner Fashion Store</span>
+            </div>
+
+            <!-- Testimoni 3 -->
+            <div class="swiper-slide bg-white p-6 rounded-xl shadow-md">
+              <p class="text-gray-700 italic mb-4">
+                "Timnya responsif dan terpercaya, proyek selesai tepat waktu."
+              </p>
+              <h4 class="font-semibold text-teal-600">Andi Pratama</h4>
+              <span class="text-sm text-gray-500">CEO Startup Tech</span>
+            </div>
+          </div>
+          <!-- Pagination -->
+          <div class="swiper-pagination mt-6"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Metode Pembayaran -->
+    <section id="pembayaran" class="payment-section">
+      <div class="payment-container">
+        <!-- Bagian kiri: teks -->
+        <div class="payment-text">
+          <h2>Metode Pembayaran</h2>
+          <p>
+            Kami mendukung berbagai metode pembayaran agar transaksi Anda
+            semakin mudah, cepat, dan aman.
+          </p>
+        </div>
+
+        <!-- Bagian kanan: logo -->
+        <div class="payment-logos">
+          <img
+            src="gopay.jpg"
+            alt="Gopay"
+          />
+          <img
+            src="dana.jpg"
+            alt="Dana"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/512px-Bank_Central_Asia.svg.png"
+            alt="BCA"
+          />
+          <img
+            src="bsi.jpg"
+            alt="Mandiri"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-12 border-t border-slate-100">
+      <div class="max-w-3xl mx-auto px-5">
+        <h2 class="text-2xl font-semibold">Hubungi Kami</h2>
+        <p class="mt-2 text-slate-600">
+          Tertarik bekerja sama? Hubungi kami melalui email atau WhatsApp.
+        </p>
+
+        <form
+          action="mailto:info@kreatifdigital.com"
+          method="post"
+          enctype="text/plain"
+          class="mt-6 grid gap-4"
+        >
+          <input
+            type="text"
+            name="Nama"
+            placeholder="Nama"
+            class="w-full p-3 rounded-md border border-slate-200"
+            required
+          />
+          <input
+            type="email"
+            name="Email"
+            placeholder="Email"
+            class="w-full p-3 rounded-md border border-slate-200"
+            required
+          />
+          <textarea
+            name="Pesan"
+            rows="5"
+            placeholder="Pesan singkat"
+            class="w-full p-3 rounded-md border border-slate-200"
+            required
+          ></textarea>
+          <div class="flex items-center gap-3">
+            <button
+              type="submit"
+              class="px-5 py-2 rounded-md bg-teal-500 text-white"
+            >
+              Kirim
+            </button>
+            <a
+              href="https://wa.me/6281234567890?text=Halo%20saya%20tertarik%20dengan%20layanan%20Anda"
+              target="_blank"
+              class="text-sm text-teal-600 underline"
+              >Chat via WhatsApp</a
+            >
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-sm text-slate-500">
+      <div
+        class="max-w-5xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between"
+      >
+        <div>
+          © <span id="year"></span> PT Kreatif Digital. All rights reserved.
+        </div>
+        <div class="mt-3 md:mt-0">
+          Follow:
+          <a href="#" class="underline">LinkedIn</a> ·
+          <a href="#" class="underline">Instagram</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Tombol WhatsApp melayang -->
+    <a
+      href="https://wa.me/6281234567890?text=Halo%20PT%20Kreatif%20Digital,%20saya%20ingin%20konsultasi"
+      class="whatsapp-float"
+      target="_blank"
+    >
+      <i class="my-float">💬</i>
+    </a>
+
+    <script>
+      // year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // mobile nav toggle
+      const navToggle = document.getElementById("navToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      navToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // close mobile menu on link click
+      mobileMenu
+        .querySelectorAll("a")
+        .forEach((a) =>
+          a.addEventListener("click", () => mobileMenu.classList.add("hidden"))
+        );
+    </script>
+    <!-- SwiperJS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- SwiperJS Init -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>
